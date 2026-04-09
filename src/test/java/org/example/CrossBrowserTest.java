@@ -1,5 +1,7 @@
 package org.example;
 import java.time.Duration;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -17,10 +19,13 @@ public class CrossBrowserTest {
     @Parameters("browser")
     public void setup(String browser) throws Exception {
         if (browser.equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("chrome")) {
+            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("Edge")) {
+            WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         } else {
             throw new Exception("Incorrect Browser");
