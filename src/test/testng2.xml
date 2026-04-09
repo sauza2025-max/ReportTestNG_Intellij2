@@ -9,21 +9,21 @@
     <test thread-count="5" name="ChromeTest">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="org.example.CrossBrowserTestingScript" />
+            <class name="org.example.CrossBrowserTest" />
         </classes>
     </test> <!-- Test -->
 
     <test thread-count="5" name="FireFox">
         <parameter name="browser" value="firefox"></parameter>
         <classes>
-            <class name="org.example.CrossBrowserTestingScript" />
+            <class name="org.example.CrossBrowserTest" />
         </classes>
     </test>
 
     <test thread-count="5" name="EdgeTest">
         <parameter name="browser" value="edge"></parameter>
         <classes>
-            <class name="org.example.CrossBrowserTestingScript" />
+            <class name="org.example.CrossBrowserTest" />
         </classes>
     </test>
 </suite>
